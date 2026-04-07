@@ -2,18 +2,160 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Biodata - Purple Web</title>
-    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Saya - Purple Web</title>
+    <style>
+        /* CSS INTERNAL */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3e5f5; /* Background Ungu Muda */
+            color: #4a148c;
+        }
+
+        /* Navigasi */
+        nav {
+            background-color: #6a1b9a;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: #e1bee7;
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-header h2 {
+            margin: 10px 0;
+            color: #7b1fa2;
+            border-bottom: 3px solid #ce93d8;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Desain Tabel Biodata */
+        .bio-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.1rem;
+        }
+
+        .bio-table tr {
+            border-bottom: 1px solid #f3e5f5;
+        }
+
+        .bio-table td {
+            padding: 15px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #6a1b9a;
+            width: 35%;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        /* Tombol Kembali */
+        .btn-back {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #8e24aa;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            color: #4a148c;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #9c27b0;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
 <body>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="galeri-foto.html">Foto</a>
+        <a href="galeri-video.html">Video</a>
+    </nav>
+
     <div class="container">
-        <h2>Biodata Diri</h2>
-        <table>
-            <tr><td><strong>Nama</strong></td><td>: Hana Fakhriah</td></tr>
-            <tr><td><strong>Jurusan</strong></td><td>: Sosial Ekonomi Perikanan</td></tr>
-            <tr><td><strong>Hobi</strong></td><td>: Fotografi, Belajar Teknologi, Desain </td></tr>
+        <div class="profile-header">
+            <h2>Biodata Diri</h2>
+        </div>
+
+        <table class="bio-table">
+            <tr>
+                <td class="label">Nama Lengkap</td>
+                <td class="value">Hana Fakhriah</td>
+            </tr>
+            <tr>
+                <td class="label">Tempat, Tgl Lahir</td>
+                <td class="value">Amuntai, 27 Februari 2005</td>
+            </tr>
+            <tr>
+                <td class="label">Jenis Kelamin</td>
+                <td class="value">Perempuan</td>
+            </tr>
+            <tr>
+                <td class="label">Alamat</td>
+                <td class="value">Jln.STM No.02 RT 002 RW 005 Kelurahan Komet Banjarbaru.</td>
+            </tr>
+            <tr>
+                <td class="label">Pekerjaan</td>
+                <td class="value">Mahasiswa</td>
+            </tr>
+            <tr>
+                <td class="label">Hobi</td>
+                <td class="value">Mendengarkan Musik, jalan-jalan, desain</td>
+            </tr>
+            <tr>
+                <td class="label">Motto Hidup</td>
+                <td class="value">"Mulai aja dulu, sisanya urusan nanti."</td>
+            </tr>
         </table>
-        <br>
-        <a href="index.html">Kembali ke Beranda</a>
+
+        <a href="index.html" class="btn-back">&larr; Kembali ke Beranda</a>
     </div>
+
+    <footer>
+        &copy; 2026 Profil Hana Fakhriah
+    </footer>
+
 </body>
 </html>
