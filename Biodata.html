@@ -3,44 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Saya - Purple Web</title>
+    <title>Biodata - Website Lavender</title>
     <style>
-        /* CSS INTERNAL */
+        /* TEMA WARNA UNGU MUDA (KONSISTEN) */
+        :root {
+            --primary-purple: #9b59b6;
+            --light-purple: #f3e5f5;
+            --dark-purple: #4a148c;
+            --accent-purple: #d1c4e9;
+            --bg-color: #fdfbff;
+        }
+
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f3e5f5; /* Background Ungu Muda */
-            color: #4a148c;
+            background-color: var(--bg-color);
+            color: #333;
         }
 
         /* Navigasi */
         nav {
-            background-color: #6a1b9a;
+            background-color: var(--primary-purple);
             padding: 15px 0;
             text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 0.9rem;
+            margin: 0 20px;
+            font-weight: 600;
         }
 
         nav a:hover {
-            color: #e1bee7;
+            color: var(--accent-purple);
         }
 
-        /* Container Utama */
+        /* Container Biodata */
         .container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 40px auto;
             background: white;
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(155, 89, 182, 0.1);
         }
 
         .profile-header {
@@ -48,23 +55,29 @@
             margin-bottom: 30px;
         }
 
-        .profile-header h2 {
-            margin: 10px 0;
-            color: #7b1fa2;
-            border-bottom: 3px solid #ce93d8;
-            display: inline-block;
-            padding-bottom: 5px;
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--accent-purple);
+            object-fit: cover;
+            margin-bottom: 15px;
         }
 
-        /* Desain Tabel Biodata */
+        h2 {
+            color: var(--dark-purple);
+            margin: 0;
+        }
+
+        /* Tabel Biodata */
         .bio-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 1.1rem;
+            margin-top: 20px;
         }
 
         .bio-table tr {
-            border-bottom: 1px solid #f3e5f5;
+            border-bottom: 1px solid var(--light-purple);
         }
 
         .bio-table td {
@@ -73,34 +86,26 @@
 
         .label {
             font-weight: bold;
-            color: #6a1b9a;
-            width: 35%;
+            color: var(--primary-purple);
+            width: 30%;
         }
 
-        .value {
-            color: #333;
-        }
-
-        /* Tombol Kembali */
-        .btn-back {
-            display: block;
-            text-align: center;
-            margin-top: 30px;
-            text-decoration: none;
-            color: #8e24aa;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn-back:hover {
-            color: #4a148c;
-            transform: scale(1.05);
+        /* Skill Badges */
+        .skill-tag {
+            display: inline-block;
+            background: var(--light-purple);
+            color: var(--dark-purple);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 2px;
+            font-weight: 500;
         }
 
         footer {
             text-align: center;
-            margin-top: 20px;
-            color: #9c27b0;
+            padding: 20px;
+            color: #888;
             font-size: 0.8rem;
         }
     </style>
@@ -108,53 +113,54 @@
 <body>
 
     <nav>
-        <a href="index.html">Beranda</a>
-        <a href="biodata.html">Biodata</a>
-        <a href="galeri-foto.html">Foto</a>
-        <a href="galeri-video.html">Video</a>
+        <a href="index.html">HOME</a>
+        <a href="biodata.html">BIODATA</a>
+        <a href="galeri-foto.html">FOTO</a>
+        <a href="galeri-video.html">VIDEO</a>
     </nav>
 
     <div class="container">
         <div class="profile-header">
+            <img src="https://via.placeholder.com/150/d1c4e9/4a148c?text=Foto+Profil" alt="Foto Profil" class="profile-img">
             <h2>Biodata Diri</h2>
+            <p style="color: #777;">"Mengeksplorasi dunia lewat baris kode dan warna ungu."</p>
         </div>
 
         <table class="bio-table">
             <tr>
                 <td class="label">Nama Lengkap</td>
-                <td class="value">Hana Fakhriah</td>
+                <td>Nama Lengkap Anda</td>
             </tr>
             <tr>
                 <td class="label">Tempat, Tgl Lahir</td>
-                <td class="value">Amuntai, 27 Februari 2005</td>
+                <td>Jakarta, 01 Januari 2000</td>
             </tr>
             <tr>
-                <td class="label">Jenis Kelamin</td>
-                <td class="value"> Perempuan</td>
+                <td class="label">Pendidikan</td>
+                <td>Teknik Informatika - Universitas XYZ</td>
             </tr>
             <tr>
-                <td class="label">Alamat</td>
-                <td class="value">Jl. STM No.02 RT 002 RW 005 Kelurahan Komet Banjarbaru</td>
+                <td class="label">Email</td>
+                <td>halo@emailkamu.com</td>
             </tr>
             <tr>
-                <td class="label">Pekerjaan</td>
-                <td class="value">Mahasiswa</td>
+                <td class="label">Keahlian</td>
+                <td>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">UI Design</span>
+                    <span class="skill-tag">Photography</span>
+                </td>
             </tr>
             <tr>
                 <td class="label">Hobi</td>
-                <td class="value">Mendengarkan Musik, fotografi, desain</td>
-            </tr>
-            <tr>
-                <td class="label">Motto Hidup</td>
-                <td class="value">"Mulai aja dulu, sisanya urusan nanti."</td>
+                <td>Membaca, Travelling, Menonton Film</td>
             </tr>
         </table>
-
-        <a href="index.html" class="btn-back">&larr; Kembali ke Beranda</a>
     </div>
 
     <footer>
-        &copy; 2026 Hana Fakhriah
+        &copy; 2024 Biodata Portofolio | Tema Lavender
     </footer>
 
 </body>
