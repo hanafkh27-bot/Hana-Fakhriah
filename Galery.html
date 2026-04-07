@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto - Hana</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: Arial, sans-serif; background: linear-gradient(to bottom, #e0f2fe, #bae6fd); color: #1e2937; }
+        nav { background: #0f172a; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; color: white; position: sticky; top: 0; z-index: 100; }
+        nav h1 { font-size: 1.9rem; }
+        nav ul { list-style: none; display: flex; gap: 1.5rem; }
+        nav a { color: white; text-decoration: none; font-weight: 600; }
+        nav a:hover { color: #22d3ee; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        h2 { text-align: center; margin: 30px 0; }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+        .gallery img:hover { transform: scale(1.05); }
+        footer { text-align: center; padding: 25px; background: #0f172a; color: white; margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Website Hana</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biodata.html">Biodata</a></li>
+            <li><a href="galeri-foto.html">Galeri Foto</a></li>
+            <li><a href="galeri-video.html">Galeri Video</a></li>
+        </ul>
+    </nav>
 
+    <div class="container">
+        <h2>Galeri Foto</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/600x400/06b6d4/ffffff?text=Foto+1" alt="Foto 1">
+            <img src="https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Foto+2" alt="Foto 2">
+            <img src="https://via.placeholder.com/600x400/ec4899/ffffff?text=Foto+3" alt="Foto 3">
+            <img src="https://via.placeholder.com/600x400/f59e0b/ffffff?text=Foto+4" alt="Foto 4">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Dibuat dengan ❤️ oleh Hana</p>
+    </footer>
+</body>
+</html>
