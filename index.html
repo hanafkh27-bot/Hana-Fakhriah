@@ -96,10 +96,6 @@
             box-shadow: 0 15px 35px rgba(106, 27, 154, 0.15);
             text-align: center;
         }
-        .main-card h2 {
-            color: #6a1b9a;
-            margin-bottom: 25px;
-        }
         .btn {
             display: inline-block;
             margin: 12px 8px;
@@ -125,49 +121,104 @@
             font-size: 0.95rem;
             margin-top: 60px;
         }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.6rem; }
-            .main-card { padding: 35px 25px; }
+
+        /* Untuk Nested Menu */
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .section-title {
+            color: #6a1b9a;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
+
+    <!-- Navigasi -->
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">🌸 Hana</a>
+            <a href="#" class="logo" onclick="showHome()">🌸 Hana</a>
             <div>
-                <a href="index.html">Beranda</a>
+                <a href="#" onclick="showHome()">Beranda</a>
                 <a href="biodata.html">Biodata</a>
                 <a href="galeri.html">Galeri Foto</a>
                 <a href="video.html">Video</a>
+                <a href="tugas2.html">Tugas 2</a>
             </div>
         </div>
     </nav>
 
-    <div class="hero">
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
         <h1>Selamat Datang di Website Saya</h1>
         <div class="divider"></div>
         <p class="subtitle">Hana Fakhriah</p>
     </div>
 
+    <!-- Main Card -->
     <div class="main-card">
-        <h2>Halo, saya Hana Fakhriah 👋</h2>
-        <p>
-            Mahasiswi Program Studi Sosial Ekonomi Perikanan<br>
-            Fakultas Perikanan dan Ilmu Kelautan<br>
-            <strong>Universitas Lambung Mangkurat</strong>, Banjarmasin
-        </p>
 
-        <!-- Tombol Tugas Akhir Individu -->
-        <a href="biodata.html" class="btn">Biodata</a>
-        <a href="https://hanafkh27-bot.github.io/HanaHANA/" class="btn">Tugas 2</a>
-        <a href="tugas3.html" class="btn">Tugas 3</a>
-        <a href="tugas4.html" class="btn">Tugas 4</a>
-        <a href="tugasAkhir.html" class="btn">Tugas akhir</a>
+        <!-- HOME -->
+        <div id="home" class="content-section active">
+            <h2 style="color: #6a1b9a; margin-bottom: 20px;">Halo, saya Hana Fakhriah 👋</h2>
+            <p>
+                Mahasiswi Program Studi Sosial Ekonomi Perikanan<br>
+                Fakultas Perikanan dan Ilmu Kelautan<br>
+                <strong>Universitas Lambung Mangkurat</strong>, Banjarmasin
+            </p>
+            <p>
+                Website pribadi ini dirancang dengan nuansa warna <strong>Lavender dan Deep Purple</strong> yang lembut dan elegan.
+            </p>
+            
+            <a href="#" onclick="showTugas(3)" class="btn">Lihat Tugas 3</a>
+            <a href="#" onclick="showTugas(4)" class="btn">Lihat Tugas 4</a>
+        </div>
+
+        <!-- TUGAS 3 -->
+        <div id="tugas3" class="content-section">
+            <h2 class="section-title">Tugas 3</h2>
+            <a href="https://forms.gle/7FvFMW2rkZRHZiA88" class="btn" target="_blank">Formulir Tugas 3</a>
+            <a href="https://datastudio.google.com/reporting/d9088de1-cc46-4926-b537-4c660d7f682f" class="btn" target="_blank">Sajian Data Tugas 3</a>
+            <br><br>
+            <a href="#" onclick="showHome()" class="btn" style="background: #6a1b9a;">← Kembali ke Beranda</a>
+        </div>
+
+        <!-- TUGAS 4 -->
+        <div id="tugas4" class="content-section">
+            <h2 class="section-title">Tugas 4</h2>
+            <a href="https://forms.gle/o6N41zmkVhY8SyML9" class="btn" target="_blank">Formulir Tugas 4</a>
+            <a href="https://docs.google.com/spreadsheets/d/1oeBZeNR9DaN8O8pcDzT5BVhIZYtu6w5U/edit?usp=sharing" class="btn" target="_blank">Sajian Data Tugas 4</a>
+            <br><br>
+            <a href="#" onclick="showHome()" class="btn" style="background: #6a1b9a;">← Kembali ke Beranda</a>
+        </div>
+
     </div>
 
     <footer>
         &copy; 2026 Hana Fakhriah • Website Estetik Ungu • Banjarmasin
     </footer>
+
+    <script>
+        function showHome() {
+            document.getElementById('home').classList.add('active');
+            document.getElementById('tugas3').classList.remove('active');
+            document.getElementById('tugas4').classList.remove('active');
+        }
+
+        function showTugas(nomor) {
+            document.getElementById('home').classList.remove('active');
+            document.getElementById('tugas3').classList.remove('active');
+            document.getElementById('tugas4').classList.remove('active');
+
+            if (nomor === 3) {
+                document.getElementById('tugas3').classList.add('active');
+            } else if (nomor === 4) {
+                document.getElementById('tugas4').classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
